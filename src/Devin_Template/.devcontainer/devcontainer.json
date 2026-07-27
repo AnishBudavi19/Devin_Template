@@ -1,5 +1,5 @@
 {
-  "name": "aboc-autonomous-business-operations-center",
+  "name": "Devin_Template",
   "build": {
     "dockerfile": "Dockerfile"
   },
