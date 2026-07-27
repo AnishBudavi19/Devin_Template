@@ -145,7 +145,7 @@ npm install -g @devcontainers/cli
 ```powershell
 $env:NODE_OPTIONS = "--use-system-ca"
 
-devcontainer templates apply --template-id ghcr.io/anishbudavi19/devin-template/aboc-workspace:latest --workspace-folder .
+devcontainer templates apply --template-id ghcr.io/anishbudavi19/aboc-workspace/aboc-workspace:latest --workspace-folder .
 ```
 
 > Apply is a one-time copy operation and will not overwrite an existing `.devcontainer` directory.

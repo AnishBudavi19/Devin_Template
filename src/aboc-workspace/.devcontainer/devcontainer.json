@@ -1,5 +1,5 @@
 {
-  "name": "Devin_Template",
+  "name": "aboc-workspace",
   "build": {
     "dockerfile": "Dockerfile"
   },
