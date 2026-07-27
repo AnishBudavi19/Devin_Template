@@ -1,7 +1,7 @@
 # Base image – Microsoft's base devcontainer image (git, curl, zsh, vscode user).
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
 
-# ── System packages and Python ───────────────────────────────────────────────────────────
+# ── System packages and Python ────────────────────────────────────────────────
 RUN apt-get update && apt-get install -y --no-install-recommends \
       ripgrep \
       jq \
@@ -28,7 +28,7 @@ RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg \
     && apt-get install -y gh \
     && rm -rf /var/lib/apt/lists/*
 
-# ── Devin CLI ─────────────────────────────────────────────
+# ── Devin CLI ────────────────────────────────────────────────────────────────
 USER vscode
 RUN curl -fsSL https://cli.devin.ai/install.sh -o /tmp/devin-install.sh \
     && sed -i '${/^"\$VERSION_DIR\/bin\/\$COMPILED_BIN_NAME" setup$/d}' /tmp/devin-install.sh \
@@ -46,6 +46,11 @@ ENV NODE_EXTRA_CA_CERTS=/etc/ssl/certs/ca-certificates.crt \
     REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt \
     SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
 
+# ── ABOC Project Metadata ─────────────────────────────────────────────────────
+ENV PROJECT_NAME="Autonomous Business Operations Center" \
+    PROJECT_SHORT_NAME="ABOC" \
+    PROJECT_TYPE="AI Operations Automation Platform"
+
 ENV PATH=/home/vscode/.local/bin:${PATH}
 
-WORKDIR /workspaces
+WORKDIR /workspace

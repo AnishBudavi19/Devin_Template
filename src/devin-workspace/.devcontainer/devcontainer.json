@@ -1,5 +1,5 @@
 {
-  "name": "devin-workspace",
+  "name": "aboc-autonomous-business-operations-center",
   "build": {
     "dockerfile": "Dockerfile"
   },
@@ -14,7 +14,11 @@
   "containerEnv": {
     "DISABLE_AUTOUPDATER": "1",
     "NVIDIA_VISIBLE_DEVICES": "all",
-    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility"
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
+
+    "PROJECT_NAME": "Autonomous Business Operations Center",
+    "PROJECT_SHORT_NAME": "ABOC",
+    "PROJECT_DOMAIN": "Incident and Operations Automation"
   },
   "customizations": {
     "vscode": {
@@ -28,7 +32,11 @@
     }
   },
   "remoteUser": "vscode",
-  "runArgs": ["--userns=keep-id:uid=1000,gid=1000", "--device", "nvidia.com/gpu=all"],
+  "runArgs": [
+    "--userns=keep-id:uid=1000,gid=1000",
+    "--device",
+    "nvidia.com/gpu=all"
+  ],
   "containerUser": "vscode",
   "updateRemoteUserUID": false
 }

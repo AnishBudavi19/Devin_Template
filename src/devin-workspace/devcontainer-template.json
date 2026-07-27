@@ -1,9 +1,9 @@
 {
-  "id": "devin-workspace",
+  "id": "aboc-workspace",
   "version": "1.0.4",
-  "name": "Devin CLI + Claude Code workspace",
-  "description": "Devin CLI, Claude Code, Node 22, Python 3, and gh, with automatic corporate TLS-interception CA handling.",
-  "documentationURL": "https://github.com/ravikiranvs/devin-template",
-  "publisher": "ravikiranvs",
+  "name": "Autonomous Business Operations Center (ABOC)",
+  "description": "AI-powered platform for automating IT incident management, customer complaint handling, service requests, system alerts, infrastructure failure response, ticket prioritization, assignment, escalation, and operational reporting.",
+  "documentationURL": "https://github.com/AnishBudavi19/Devin_Template",
+  "publisher": "AnishBudavi19",
   "options": {}
 }
