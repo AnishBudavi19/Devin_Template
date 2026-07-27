@@ -16,9 +16,9 @@
     "NVIDIA_VISIBLE_DEVICES": "all",
     "NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
 
-    "PROJECT_NAME": "Autonomous Business Operations Center",
-    "PROJECT_SHORT_NAME": "ABOC",
-    "PROJECT_DOMAIN": "Incident and Operations Automation"
+    "PROJECT_NAME": "Agentic AI Stock Advisor",
+    "PROJECT_SHORT_NAME": "AISA",
+    "PROJECT_DOMAIN": "Stock Analysis and Investment Advisory"
   },
   "customizations": {
     "vscode": {

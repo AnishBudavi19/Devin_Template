@@ -1,9 +1,8 @@
 {
   "id": "aboc-workspace",
   "version": "1.0.4",
-  "name": "Autonomous Business Operations Center (ABOC)",
-  "description": "AI-powered platform for automating IT incident management, customer complaint handling, service requests, system alerts, infrastructure failure response, ticket prioritization, assignment, escalation, and operational reporting.",
-  "documentationURL": "https://github.com/AnishBudavi19/aboc-workspace",
+  "name": "gentic AI Stock Advisor",
+  "description": "AI-powered stock advisory platform for real-time stock analysis, portfolio assessment, risk profiling, investment recommendation generation, portfolio diversification, Excel-based portfolio management, personalized stock suggestions, market data insights, automated portfolio updates, and intelligent investment reporting."
   "publisher": "AnishBudavi19",
   "options": {}
 }

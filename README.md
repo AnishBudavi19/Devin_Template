@@ -1,14 +1,15 @@
-# Autonomous Business Operations Center (ABOC)
+# Agentic AI Stock Advisor (AISA)
 
-An AI-powered operations automation platform that intelligently manages:
+An AI-powered investment advisory platform that intelligently manages:
 
-- IT Incidents
-- Customer Complaints
-- System Alerts
-- Service Requests
-- Infrastructure Failures
+- Stock Information Retrieval
+- Portfolio Analysis
+- Risk Assessment
+- Investment Recommendations
+- Portfolio Optimization
+- Excel Portfolio Management
 
-ABOC uses AI agents to automate operational workflows, eliminating manual effort required for ticket triage, prioritization, assignment, escalation, monitoring, and reporting.
+AISA uses AI agents to automate investment research, portfolio analysis, stock recommendation generation, risk evaluation, and portfolio updates.
 
 Repository:
 
@@ -20,97 +21,276 @@ Repository:
 
 ## Project Overview
 
-Organizations receive hundreds of operational events every day:
+Investors need to continuously monitor:
 
-- IT incidents
-- Customer complaints
-- Infrastructure failures
-- Monitoring alerts
-- Service requests
+- Stock prices
+- Portfolio performance
+- Market trends
+- Risk exposure
+- Diversification opportunities
 
-Traditionally, operations teams must:
+Traditionally, investors must:
 
-1. Read and understand incoming tickets
-2. Determine severity and priority
-3. Assign tickets to the correct team
-4. Monitor progress
-5. Escalate delayed issues
-6. Generate operational reports
+1. Research stock information
+2. Analyze portfolio allocation
+3. Calculate risk exposure
+4. Identify diversification opportunities
+5. Track market performance
+6. Update portfolio records
 
-ABOC automates these activities using a network of AI agents.
+AISA automates these activities using a network of AI agents.
 
 ---
 
-## ABOC Agent Architecture
+## AISA Agent Architecture
 
 ```text
-Incoming Event
-      │
-      ▼
-Intake Agent
-      │
-      ▼
-Priority Classification Agent
-      │
-      ▼
-Assignment Agent
-      │
-      ▼
-Monitoring Agent
-      │
-      ▼
-Escalation Agent
-      │
-      ▼
-Reporting Agent
+User Query / Portfolio Upload
+           │
+           ▼
+      Intake Agent
+           │
+           ▼
+ Stock Information Agent
+           │
+           ▼
+ Portfolio Analysis Agent
+           │
+           ▼
+ Risk Assessment Agent
+           │
+           ▼
+ Recommendation Agent
+           │
+           ▼
+ Portfolio Update Agent
+           │
+           ▼
+      Reporting Agent
 ```
 
 ### AI Agents
 
 #### Intake Agent
-- Receives incoming operational events
-- Extracts relevant details
-- Creates structured tickets
 
-#### Priority Classification Agent
-- Determines business impact
-- Assigns severity level
-- Calculates priority
+- Receives user queries and portfolio uploads
+- Extracts investment requirements
+- Creates structured investment context
 
-#### Assignment Agent
-- Routes tickets to appropriate teams
-- Balances workload distribution
-- Supports automatic reassignment
+#### Stock Information Agent
 
-#### Monitoring Agent
-- Tracks ticket progress
-- Detects SLA risks
-- Monitors response times
+- Fetches current stock prices
+- Provides monthly high and low values
+- Retrieves company information
+- Collects key financial metrics
+- Analyzes stock fundamentals
 
-#### Escalation Agent
-- Automatically escalates delayed tickets
-- Notifies stakeholders
-- Ensures SLA compliance
+#### Portfolio Analysis Agent
+
+- Reads uploaded Excel portfolios
+- Evaluates sector allocation
+- Calculates portfolio diversification
+- Detects concentration risks
+- Identifies missing sector exposure
+
+#### Risk Assessment Agent
+
+- Determines investor risk profile
+- Supports Low Risk strategy
+- Supports Medium Risk strategy
+- Supports High Risk strategy
+- Calculates portfolio risk score
+
+#### Recommendation Agent
+
+- Generates personalized stock recommendations
+- Suggests diversification opportunities
+- Identifies growth opportunities
+- Recommends stocks based on investor profile
+- Explains recommendation rationale
+
+#### Portfolio Update Agent
+
+- Adds recommended stocks to Excel files
+- Creates recommendation sheets
+- Updates portfolio reports automatically
+- Preserves existing portfolio data
 
 #### Reporting Agent
-- Generates operational reports
-- Produces performance metrics
-- Identifies recurring issues
+
+- Generates portfolio insights
+- Produces investment summaries
+- Tracks recommendation history
+- Creates portfolio health reports
 
 ---
 
 ## Key Features
 
-- AI-powered ticket intake
-- Automated incident classification
-- Smart priority scoring
-- Automatic team assignment
-- SLA monitoring
-- Escalation automation
-- Operational reporting
-- Infrastructure alert processing
-- Customer complaint management
-- Service request automation
+- AI-powered stock research
+- Real-time stock information retrieval
+- Current stock price tracking
+- Monthly high and low stock analysis
+- Company profile and fundamentals analysis
+- Excel portfolio scanning
+- Portfolio diversification analysis
+- Sector allocation analysis
+- Risk-based stock recommendations
+- Portfolio optimization suggestions
+- Automated Excel portfolio updates
+- Investor preference memory
+- Personalized investment insights
+- Portfolio health scoring
+
+---
+
+## Supported User Scenarios
+
+### Scenario 1: Stock Information
+
+User:
+
+```text
+What is the current price of TCS?
+```
+
+Response:
+
+```text
+Current Price
+Monthly High
+Monthly Low
+Company Information
+Market Capitalization
+Sector Information
+Investment Summary
+```
+
+---
+
+### Scenario 2: Portfolio Analysis
+
+User Uploads:
+
+```text
+portfolio.xlsx
+```
+
+Agent Actions:
+
+1. Read portfolio
+2. Analyze holdings
+3. Determine sector allocation
+4. Assess risk exposure
+5. Generate recommendations
+6. Update Excel with suggested stocks
+
+---
+
+### Scenario 3: Risk-Based Recommendations
+
+User:
+
+```text
+Suggest stocks for a medium-risk investor.
+```
+
+Agent Actions:
+
+```text
+Retrieve Risk Profile
+Analyze Current Portfolio
+Fetch Market Data
+Identify Diversification Needs
+Generate Recommendations
+Provide Investment Report
+```
+
+---
+
+## Portfolio Recommendation Workflow
+
+```text
+Portfolio Upload
+        │
+        ▼
+Read Excel Portfolio
+        │
+        ▼
+Analyze Holdings
+        │
+        ▼
+Determine Risk Level
+        │
+        ▼
+Fetch Stock Market Data
+        │
+        ▼
+Generate Recommendations
+        │
+        ▼
+Update Portfolio Excel File
+        │
+        ▼
+Generate Report
+```
+
+---
+
+## Memory System
+
+The platform maintains investor preferences and investment history.
+
+Stored Information:
+
+```json
+{
+  "user_id": "123",
+  "risk_profile": "Medium",
+  "investment_horizon": "5 Years",
+  "preferred_sectors": [
+    "IT",
+    "Banking"
+  ],
+  "avoid_sectors": [
+    "Crypto"
+  ]
+}
+```
+
+Memory enables:
+
+- Personalized recommendations
+- Consistent investment strategies
+- Portfolio tracking
+- Long-term investment guidance
+
+---
+
+## Stock Information Sources
+
+The system can integrate with:
+
+- Yahoo Finance
+- Alpha Vantage
+- Polygon.io
+- Finnhub
+- Twelve Data
+- NSE/BSE Market Data APIs
+
+Supported Information:
+
+- Current Price
+- Monthly High
+- Monthly Low
+- 52 Week High
+- 52 Week Low
+- Company Information
+- Sector Information
+- Market Capitalization
+- P/E Ratio
+- Dividend Yield
+- Financial Metrics
 
 ---
 
@@ -191,49 +371,82 @@ Installs development skills into:
 
 These skills assist with:
 
-- Specification writing
-- Ticket creation
-- TDD workflows
-- Code review
-- Implementation planning
-- Issue triage
+- Stock research
+- Portfolio analysis
+- Risk assessment
+- Excel processing
+- Recommendation generation
+- Financial reporting
+- Investment planning
 
 ---
 
 ## Example Workflow
 
-### Incoming Ticket
+### User Request
 
 ```text
-System Alert:
-Database response time exceeds threshold.
+Analyze my portfolio and recommend stocks for a medium-risk investment strategy.
 ```
 
 ### Automated Processing
 
 ```text
+Portfolio Upload
+        ↓
 Intake Agent
-    ↓
-Priority Agent (High Severity)
-    ↓
-Assignment Agent (Database Team)
-    ↓
-Monitoring Agent
-    ↓
-Escalation Agent (if SLA breached)
-    ↓
+        ↓
+Portfolio Analysis Agent
+        ↓
+Risk Assessment Agent
+        ↓
+Stock Information Agent
+        ↓
+Recommendation Agent
+        ↓
+Portfolio Update Agent
+        ↓
 Reporting Agent
 ```
 
 ### Result
 
 ```text
-Ticket Created
-Priority Assigned
-Team Assigned
-SLA Monitored
-Escalation Managed
-Report Generated
+Portfolio Analyzed
+Risk Profile Identified
+Sector Allocation Reviewed
+Diversification Opportunities Found
+Recommended Stocks Generated
+Excel Portfolio Updated
+Investment Report Created
+```
+
+---
+
+## Example Output
+
+### Portfolio Summary
+
+```text
+Portfolio Score: 84/100
+
+Diversification: 87
+Risk Balance: 82
+Sector Coverage: 84
+Growth Potential: 83
+```
+
+### Recommendations
+
+```text
+1. Infosys
+   Reason: Strong IT Exposure
+
+2. Sun Pharma
+   Reason: Diversification Opportunity
+
+3. HDFC Bank
+   Reason: Stable Long-Term Growth
 ```
 
 ---
@@ -252,15 +465,17 @@ Report Generated
 
 ## Business Value
 
-ABOC helps organizations:
+AISA helps investors:
 
-- Reduce incident response time
-- Improve ticket resolution efficiency
-- Ensure SLA compliance
-- Minimize manual operational work
-- Improve customer satisfaction
-- Enhance operational visibility
-- Scale support operations through AI automation
+- Make data-driven investment decisions
+- Improve portfolio diversification
+- Understand portfolio risk exposure
+- Receive AI-powered stock recommendations
+- Reduce research effort
+- Automate portfolio analysis
+- Keep portfolio records updated
+- Enhance investment decision-making
+- Scale financial advisory workflows using AI
 
 ---
 
@@ -271,11 +486,16 @@ ABOC helps organizations:
 - Python 3
 - GitHub CLI
 - Podman Dev Containers
-- AI Agent Framework
+- LangGraph / Agent Framework
+- LLM Integration (GPT, Claude, Gemini)
+- Stock Market Data APIs
+- Excel Processing Engine
+- Portfolio Recommendation Engine
+- Memory & User Profile Management
 - Automated Workflow Orchestration
 
 ---
 
 ## License
 
-Internal project for the Autonomous Business Operations Center (ABOC).
+Internal project for the Agentic AI Stock Advisor (AISA).
