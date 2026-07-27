@@ -1,18 +1,29 @@
 name: Release templates
+
 on:
   workflow_dispatch:
   push:
-    branches: [main]
+    branches:
+      - main
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       packages: write
+
     steps:
-      - uses: actions/checkout@v4
-      - uses: devcontainers/action@v1
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Publish Dev Container Templates
+        uses: devcontainers/action@v1
         with:
           publish-templates: "true"
           base-path-to-templates: "./src"
